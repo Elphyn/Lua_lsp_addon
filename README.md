@@ -23,8 +23,6 @@ Trigger cases:
   - `redstone.<something>`
   - `minecraft`
   - `computercraft`
-- File is named:
-  - `startup.lua`
 
 After applying the workspace, you should have full autocompletion and diagnostics.
 
