@@ -1,6 +1,13 @@
 {
   "$schema": "https://raw.githubusercontent.com/carsakiller/LLS-Addons/main/schemas/addon.schema.json",
   "name": "CC: Tweaked",
+  "words": [
+    "turtle%.%w+",
+    "rednet%.%w+",
+    "redstone%.%w+",
+    "minecraft",
+    "computercraft"
+  ],
   "description": "Definitions for the CC: Tweaked Lua API for Minecraft.",
   "settings": {
     "Lua.runtime.version": "Lua 5.3"
