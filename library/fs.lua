@@ -127,7 +127,7 @@ function fs.getDir(path) end
 
 ---Get the size of a file
 ---@param path path The path to the file to get the size of
----@return number bytes The size of the file in bytes. 0 if the path points to a directory
+---@return integer bytes The size of the file in bytes. 0 if the path points to a directory
 ---@throws If the path doesn't exist
 ---## Examples
 ---```
@@ -246,7 +246,7 @@ function fs.getDrive(path) end
 
 ---Get the amount of free space on the mount that the specified path is located on
 ---@param path path A path that belongs to the desired mount
----@return number|"unlimited" free The free space in bytes, `unlimited`, or 0 if read-only
+---@return integer|"unlimited" free The free space in bytes, `unlimited`, or 0 if read-only
 ---@throws If the path doesn't exist
 ------
 ---[Official Documentation](https://tweaked.cc/module/fs.html#v:getFreeSpace)
@@ -267,7 +267,7 @@ function fs.find(pattern) end
 
 ---Get the total capacity of the mount the path is located on, if available
 ---@param path path A path that is located on the desired mount
----@return number|nil capacity The capacity of the mount in bytes or `nil` if read-only
+---@return integer? capacity The capacity of the mount in bytes or `nil` if read-only
 ---@throws If the capacity could not be determined
 ------
 ---[Official Documentation](https://tweaked.cc/module/fs.html#v:getCapacity)
