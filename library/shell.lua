@@ -9,7 +9,7 @@
 ---
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html)
----@class shell
+---@class ccTweaked.shell
 shell = {}
 
 ---Run a program with the provided arguments
@@ -50,7 +50,7 @@ function shell.exit() end
 function shell.dir() end
 
 ---Set the current working directory
----@param dir path The path to the current working directory
+---@param dir string The path to the current working directory
 ---@throws If the path does not exist
 ---@throws If the path is not a directory
 ------
@@ -64,7 +64,7 @@ function shell.setDir(dir) end
 ---For example, turtles will look in:
 ---- `/rom/programs`
 ---- `/rom/programs/turtle/`
----@return path path The current path to programs
+---@return string path The current path to programs
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:path)
 function shell.path() end
@@ -75,7 +75,7 @@ function shell.path() end
 ---
 ---Make sure paths start with a `/` otherwise they will be searched for from the
 ---current working directory rather than the root of this computer
----@param path path The path where programs are located
+---@param path string The path where programs are located
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:setPath)
 function shell.setPath(path) end
@@ -85,8 +85,8 @@ function shell.setPath(path) end
 ---Many APIs only take absolute paths so this function will help convert to them
 ---
 ---This does nothing if the path starts with `/`
----@param path path The relative path to resolve
----@return path absolutePath The path converted to an absolute path
+---@param path string The relative path to resolve
+---@return string absolutePath The path converted to an absolute path
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:resolve)
 function shell.resolve(path) end
@@ -139,8 +139,8 @@ function shell.completeProgram(program) end
 ---
 ---You can also return a space at the end of an argument to help indicate that
 ---another argument is desired
----@param program path The absolute path to the program without a leading `/`
----@param complete shellCompletionFunction The function to use for completions
+---@param program string The absolute path to the program without a leading `/`
+---@param complete ccTweaked.shell.completionFunction The function to use for completions
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:setCompletionFunction)
 function shell.setCompletionFunction(program, complete) end
@@ -148,20 +148,21 @@ function shell.setCompletionFunction(program, complete) end
 ---Get a list of all completion functions
 ---
 ---This should only be needed when creating a custom shell
----@return shellCompletionInfo
+---
+---@return ccTweaked.shell.completionInfo
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:getCompletionInfo)
 function shell.getCompletionInfo() end
 
 ---Get the path of the currently running program
----@return path path The path to the currently running program
+---@return string path The path to the currently running program
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:getRunningProgram)
 function shell.getRunningProgram() end
 
 ---Add an alias for a program
 ---@param alias string The alias to add
----@param program string|path The name/path of the program to alias
+---@param program string|string The name/path of the program to alias
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:setAlias)
 function shell.setAlias(alias, program) end
@@ -182,7 +183,7 @@ function shell.aliases() end
 ---
 ---This function is only available if the `multishell` API is
 ---@param ... string The command line to run
----@return PID PID The ID of the process that was started
+---@return ccTweaked.multishell.PID PID The ID of the process that was started
 ---## Example
 ---```
 ---local id = shell.openTab("lua")
@@ -193,7 +194,7 @@ function shell.aliases() end
 function shell.openTab(...) end
 
 ---Switch to a different `multishell` tab
----@param PID PID The ID of the process to switch to
+---@param PID ccTweaked.multishell.PID The ID of the process to switch to
 ------
 ---[Official Documentation](https://tweaked.cc/module/shell.html#v:switchTab)
 function shell.switchTab(PID) end

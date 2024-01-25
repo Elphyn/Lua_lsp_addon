@@ -29,7 +29,7 @@ function nft.load(path) end
 ---@param image table An image data table, as returned from `nft.parse()` or `nft.load()`
 ---@param xPos integer The x position to begin the drawing at
 ---@param yPos integer The y position to begin the drawing at
----@param target? Redirect The terminal to draw to. Defaults to the current terminal
+---@param target? ccTweaked.term.Redirect The terminal to draw to. Defaults to the current terminal
 ---
 ------
 ---[Official Documentation](https://tweaked.cc/library/cc.image.nft.html#v:draw)

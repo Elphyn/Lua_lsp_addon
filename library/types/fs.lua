@@ -1,8 +1,6 @@
 ---@meta
 
----@alias path string A string that specifies a location in a directory structure. Components are separated by slashes `/`
-
----@alias openMode
+---@alias ccTweaked.fs.openMode
 ---| '"r"' # read mode
 ---| '"w"' # write mode
 ---| '"a"' # append mode
@@ -10,11 +8,14 @@
 ---| '"wb"' # binary write mode
 ---| '"ab"' # binary append mode
 
----@alias seekWhence
+---@alias ccTweaked.fs.seekWhence
 ---| '"set"' # relative to the start of the file
 ---| '"cur"' # relative to the current position
 ---| '"end"' # relative to the end of the file
 
----@alias ASCII number An [ASCII code](https://www.rapidtables.com/code/text/ascii-table.html) that corresponds to a character
-
----@alias fileAttributes {size: integer, isDir: boolean, isReadOnly: boolean, created: epoch, modified: epoch}
+---@class ccTweaked.fs.fileAttributes
+---@field size integer
+---@field isDir boolean
+---@field isReadOnly boolean
+---@field created ccTweaked.epoch
+---@field modified ccTweaked.epoch

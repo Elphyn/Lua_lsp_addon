@@ -1,7 +1,8 @@
 ---@meta
 
 ---A HTTP response. This provides the same methods as a file as well as some response-specific methods
----@class Response
+---
+---@class ccTweaked.http.Response : ccTweaked.fs.ReadHandle
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#ty:Response)
 Response = {}
@@ -17,7 +18,7 @@ function Response.getResponseCode() end
 ---
 ---If multiple headers are sent with the same name, they will be combined with a
 ---comma
----@return table<HTTP_RESPONSE_HEADERS, string>
+---@return table<string, string>
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#ty:Response:getResponseHeaders)
 function Response.getResponseHeaders() end
@@ -49,6 +50,7 @@ function Response.read(count) end
 ---Close the response
 ---
 ---Once closed, it can no longer be read unless it is re-requested
+---
 ---@throws If the response has already been closed
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#ty:Response)

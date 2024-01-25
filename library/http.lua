@@ -15,10 +15,9 @@ http = {}
 ---[POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) request
 ---
 ---When the request is completed, the `http_success` or `http_failure` event will be fired.
----@async
 ---@param url string The URL to make the request to
 ---@param body? string The body of the request. If provided, a [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) request will be made
----@param headers? table<HTTP_REQUEST_HEADERS, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
+---@param headers? table<string, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
 ---@param binary? boolean If the request should be a binary request. If true, the body will not be UTF-8 encoded and the response will not be decoded
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#v:request)
@@ -27,8 +26,7 @@ function http.request(url, body, headers, binary) end
 ---Asynchronously make a [HTTP request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 ---
 ---When the request is completed, the `http_success` or `http_failure` event will be fired.
----@async
----@param request HTTP_REQUEST
+---@param request ccTweaked.http.Request
 ---## Request Parameter Shape
 ---```
 ---request = {
@@ -46,20 +44,20 @@ function http.request(request) end
 
 ---Make a [GET](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) request
 ---@param url string The URL to make the request to
----@param headers? table<HTTP_REQUEST_HEADERS, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
+---@param headers? table<string, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
 ---@param binary? boolean If the request should be a binary request. If true, the body will not be UTF-8 encoded and the response will not be decoded
----@return Response|BinaryResponse|nil response The HTTP response object. `nil` when the request fails
+---@return ccTweaked.http.Response|ccTweaked.http.BinaryResponse|nil response The HTTP response object. `nil` when the request fails
 ---@return string message Why the request failed
----@return nil|Response|BinaryResponse failedResponse The response object for the failed request, if available
+---@return nil|ccTweaked.http.Response|ccTweaked.http.BinaryResponse failedResponse The response object for the failed request, if available
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#v:get)
 function http.get(url, headers, binary) end
 
 ---Make a HTTP request
----@param request HTTP_REQUEST
----@return Response|BinaryResponse|nil response The HTTP response object. `nil` when the request fails
+---@param request ccTweaked.http.Request
+---@return ccTweaked.http.Response|ccTweaked.http.BinaryResponse|nil response The HTTP response object. `nil` when the request fails
 ---@return string message Why the request failed
----@return nil|Response|BinaryResponse failedResponse The response object for the failed request, if available
+---@return nil|ccTweaked.http.Response|ccTweaked.http.BinaryResponse failedResponse The response object for the failed request, if available
 ---## Request Parameter Shape
 ---```
 ---request = {
@@ -78,20 +76,20 @@ function http.get(request) end
 ---Make a [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) request
 ---@param url string The URL to make the request to
 ---@param body string The body of the [POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) request
----@param headers? table<HTTP_REQUEST_HEADERS, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
+---@param headers? table<string, string> The [request headers](https://developer.mozilla.org/en-US/docs/Glossary/Request_header)
 ---@param binary? boolean If the request should be a binary request. If true, the body will not be UTF-8 encoded and the response will not be decoded
----@return Response|BinaryResponse|nil response The HTTP response object. `nil` when the request fails
+---@return ccTweaked.http.Response|ccTweaked.http.BinaryResponse|nil response The HTTP response object. `nil` when the request fails
 ---@return string message Why the request failed
----@return nil|Response|BinaryResponse failedResponse The response object for the failed request, if available
+---@return nil|ccTweaked.http.Response|ccTweaked.http.BinaryResponse failedResponse The response object for the failed request, if available
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#v:post)
 function http.post(url, body, headers, binary) end
 
 ---Make a HTTP request
----@param request HTTP_REQUEST
----@return Response|BinaryResponse|nil response The HTTP response object. `nil` when the request fails
+---@param request ccTweaked.http.Request
+---@return ccTweaked.http.Response|ccTweaked.http.BinaryResponse|nil response The HTTP response object. `nil` when the request fails
 ---@return string message Why the request failed
----@return nil|Response|BinaryResponse failedResponse The response object for the failed request, if available
+---@return nil|ccTweaked.http.Response|ccTweaked.http.BinaryResponse failedResponse The response object for the failed request, if available
 ---## Request Parameter Shape
 ---```
 ---request = {
@@ -112,7 +110,6 @@ function http.post(request) end
 ---This will immediately return if the URL entered is itself invalid. You will
 ---then want to listen to the `http_check` event which will contain more info on
 ---if the URL can be requested.
----@async
 ---@param url string The URL to check
 ---@return boolean valid If the URL is valid. It could still 404, this is just confirming the URL is valid (read above)
 ---@return nil|string message Why the URL is invalid (e.g. blocked, malformed, etc.)
@@ -131,7 +128,7 @@ function http.checkURL(url) end
 ---Open a websocket
 ---@param url string The URL of the websocket to connect to. Should use the `ws://` or `wss://` protocol
 ---@param headers? table<string, string> Headers to send for the handshake
----@return Websocket|false websocket The websocket connection object or false if it failed to connect
+---@return ccTweaked.http.Websocket|false websocket The websocket connection object or false if it failed to connect
 ---@return string message Why the websocket failed to connect
 ------
 ---[Official Documentation](https://tweaked.cc/module/http.html#v:websocket)

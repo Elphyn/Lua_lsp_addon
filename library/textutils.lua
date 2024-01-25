@@ -95,7 +95,7 @@ textutils.json_null = {
 ---Get a textual representation of a Lua table, suitable for saving to a file or
 ---printing
 ---@param tbl table The table to convert
----@param options? serializationOptions
+---@param options? ccTweaked.textutils.serializationOptions
 ---@return string serialized The serialized representation
 ---@throws If the table contains a function
 ---@throws If the table contains tables that appear multiple times
@@ -106,7 +106,7 @@ function textutils.serialize(tbl, options) end
 ---Get a textual representation of a Lua table, suitable for saving to a file or
 ---printing
 ---@param t table The table to convert
----@param options? serializationOptions
+---@param options? ccTweaked.textutils.serializationOptions
 ---@return string serialised The serialised representation
 ---@throws If the table contains a function
 ---@throws If the table contains tables that appear multiple times
@@ -164,7 +164,7 @@ function textutils.serialiseJSON(tbl, NBTstyle) end
 
 ---Convert a serialized JSON string back into a Lua table
 ---@param str string The string to unserialize
----@param options? unserializeJSONOptions Options for unserializing
+---@param options? ccTweaked.textutils.unserializeJSONOptions Options for unserializing
 ---@return table|nil unserialized The unserialized object or `nil` if the object couldn't be unserialized
 ---@return string|nil errorMessage Why the object couldn't be unserialized
 ------
@@ -173,7 +173,7 @@ function textutils.unserializeJSON(str, options) end
 
 ---Convert a serialised JSON string back into a Lua table
 ---@param str string The string to unserialise
----@param options? unserializeJSONOptions Options for unserialising
+---@param options? ccTweaked.textutils.unserializeJSONOptions Options for unserialising
 ---@return table|nil unserialised The unserialised object or `nil` if the object couldn't be unserialised
 ---@return string|nil errorMessage Why the object couldn't be unserialised
 ------
