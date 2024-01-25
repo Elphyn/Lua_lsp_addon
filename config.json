@@ -5,10 +5,13 @@
     "turtle%.%w+",
     "rednet%.%w+",
     "redstone%.%w+",
-    "minecraft",
     "computercraft"
   ],
   "settings": {
-    "Lua.runtime.version": "Lua 5.3"
+    "Lua.runtime.version": "Lua 5.3",
+    "Lua.runtime.builtin": {
+      "io": "disable",
+      "os": "disable"
+    }
   }
 }

@@ -4,7 +4,7 @@
 ---
 ------
 ---[Official Documentation](https://tweaked.cc/peripheral/printer.html)
----@class Printer
+---@class ccTweaked.peripherals.Printer
 Printer = {}
 
 ---Writes text to the currently active page

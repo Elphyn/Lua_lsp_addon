@@ -1,6 +1,6 @@
 ---@meta
 
----It is reccommended that you use the constant values defined here rather than
+---It is recommended that you use the constant values defined here rather than
 ---any numerical values as they may change between versions
 ------
 ---[Official Documentation](https://tweaked.cc/module/keys.html)

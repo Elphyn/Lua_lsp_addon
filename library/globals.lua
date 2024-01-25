@@ -66,7 +66,7 @@ function printError(...) end
 --default values.
 ---@param replaceCharacter? string A character to replace each typed character. Useful for hiding passwords.
 ---@param history? string[] An array of strings that can be scrolled through with the arrow keys. Oldest item should be index 1 and the newest should be the highest index.
----@param completeFunction? fun(partial: string):string[] A function for completing text. The function should take the partially entered text and return an array of suggestions.
+---@param completeFunction? fun(partial: string): string[] A function for completing text. The function should take the partially entered text and return an array of suggestions.
 ---@param default? string Text that should already be entered by default
 ---@return string text The text entered by the user
 ---## Example

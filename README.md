@@ -4,14 +4,14 @@ This documentation covers the Lua API for [ComputerCraft: Tweaked](https://tweak
 ## Setup
 
 ### VS Code
-This project has been included in [LLS-Addons](https://github.com/LuaLS/LLS-Addons) and is available in the addon manager in VS Code! You can also still follow the steps below if you prefer.
+This project has been included in [LLS-Addons](https://github.com/LuaLS/LLS-Addons) and is available in the addon manager in VS Code! It can also be [installed manually](https://luals.github.io/wiki/addons/#installing-addons).
 
 ### Other Clients
 1. Download this repository
-2. Set up [a folder for containing environment emulations](https://github.com/LuaLS/lua-language-server/wiki/Libraries#setup)
-3. In this folder, create a new folder named `CC-Tweaked` or something similar.
+2. Set up a folder for containing addons, if you do not already have one.
+3. In this folder, create a new folder named `CC-Tweaked`.
 4. Paste the contents from this repo in this new `CC-Tweaked` folder.
-5. Edit your [configuration file](https://github.com/LuaLS/lua-language-server/wiki/Configuration-File) and add the path to the folder containing your new `CC-Tweaked` folder to [`workspace.userThirdParty`](https://github.com/LuaLS/lua-language-server/wiki/Settings#workspaceuserthirdparty).
+5. Edit your [configuration file](https://luals.github.io/wiki/configuration/#configuration-file) and add the path to the folder containing your new `CC-Tweaked` folder to [`workspace.userThirdParty`](https://luals.github.io/wiki/settings/#workspaceuserthirdparty).
 
 Now when you trigger one of the below cases you should be prompted to set up your workspace as a `CC: Tweaked` environment.
 
@@ -20,7 +20,6 @@ Trigger cases:
   - `turtle.???`
   - `rednet.???`
   - `redstone.???`
-  - `minecraft`
   - `computercraft`
 
 After applying the workspace, you should have full autocompletion and diagnostics.

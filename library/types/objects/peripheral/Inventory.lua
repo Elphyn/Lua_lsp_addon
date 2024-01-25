@@ -4,7 +4,7 @@
 ---
 ------
 ---[Official Documentation](https://tweaked.cc/generic_peripheral/inventory.html)
----@class Inventory
+---@class ccTweaked.peripherals.Inventory
 Inventory = {}
 
 ---Get the size of this inventory
@@ -23,7 +23,7 @@ function Inventory.size() end
 ---
 ---The returned table is sparse, and so empty slots will be nil - it is
 ---recommended to loop over using pairs rather than ipairs.
----@return itemList list The list of items in this inventory
+---@return ccTweaked.peripherals.inventory.itemList list The list of items in this inventory
 ---## Example
 ---```
 ---local chest = peripheral.find("minecraft:chest")

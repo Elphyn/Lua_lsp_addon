@@ -7,12 +7,14 @@
 ---You can set up a GPS host using the `gps` program. The program requires the `x`, `y`, `z` of the host **computer** not modem.
 ---
 ---You can choose which axes `x`, `y`, `z` refer to, just make sure that you are consistent with your usage.
+---
 ---![](https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/51/Coordinates.png/revision/latest/scale-to-width-down/200?cb=20200729013357)
 ------
 ---[Official Documentation](https://tweaked.cc/module/gps.html)
 gps = {}
 
 ---The channel that GPS requests and responses are broadcast on
+---
 ------
 ---[Official Documentation](https://tweaked.cc/module/gps.html#v:CHANNEL_GPS)
 gps.CHANNEL_GPS = 65534
