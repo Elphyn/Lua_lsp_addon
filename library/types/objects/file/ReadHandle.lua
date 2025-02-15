@@ -31,6 +31,13 @@ function ReadHandle.readAll() end
 ---[Official Documentation](https://tweaked.cc/module/fs.html#ty:ReadHandle:read)
 function ReadHandle.read(count) end
 
+---Move the cursor to a new position in the file. Sets the cursor to a new position offset by `offset`, relative to `whence`.
+---@param whence ccTweaked.io.seekMode?
+---@param offset integer?
+------
+---[Official Documentation](https://tweaked.cc/module/fs.html#ty:ReadHandle:seek)
+function ReadHandle.seek(whence, offset) end
+
 ---Close the file, freeing it
 ---
 ---Once closed, it can no longer be read unless it is reopened
