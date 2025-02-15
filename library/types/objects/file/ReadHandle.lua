@@ -34,6 +34,9 @@ function ReadHandle.read(count) end
 ---Move the cursor to a new position in the file. Sets the cursor to a new position offset by `offset`, relative to `whence`.
 ---@param whence ccTweaked.io.seekMode?
 ---@param offset integer?
+---@return integer | nil position The new cursor position or nil if failed
+---@return string? err The reason that seeking failed
+---@throws If the file has been closed
 ------
 ---[Official Documentation](https://tweaked.cc/module/fs.html#ty:ReadHandle:seek)
 function ReadHandle.seek(whence, offset) end
