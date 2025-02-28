@@ -206,3 +206,10 @@ function colors.rgb8(hex) end
 ------
 ---[Official Documentation](https://tweaked.cc/module/colors.html#v:toBlit)
 function colors.toBlit(color) end
+
+---Convert a paint/blit hex character (0-9,a-f) to a color
+---@param hex string
+---@return ccTweaked.colors.color color
+------
+---[Official Documentation](https://tweaked.cc/module/colors.html#v:fromBlit)
+function colors.fromBlit(hex) end
