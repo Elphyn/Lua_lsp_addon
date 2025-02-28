@@ -68,7 +68,7 @@ function fs.complete(path, source, includeFiles, includeDirectories) end
 
 ---Get a list of files in a directory
 ---@param path string The path to the directory to check
----@return string[]|table files
+---@return string[] files
 ---@throws If the path doesn't exist
 ---@throws If the path is not a directory
 ------
