@@ -1,6 +1,9 @@
 # CC: Tweaked Documentation
 This documentation covers the Lua API for [ComputerCraft: Tweaked](https://tweaked.cc/) and is meant to be used with [Sumneko's Lua Language Server](https://github.com/LuaLS/lua-language-server) as it uses its LuaCATS annotation system.
 
+# FORK
+This is a fork that extends some of the UnlimitedPeripherals API's that I use in my projects, [original repo](https://gitlab.com/carsakiller/cc-tweaked-documentation).
+
 ## Setup
 
 ### NVIM 
