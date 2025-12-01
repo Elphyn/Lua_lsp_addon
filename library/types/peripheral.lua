@@ -17,6 +17,7 @@
 ---| '"printer"'
 ---| '"speaker"'
 ---| '"inventory"'
+---| '"basin"'
 
 ---@alias ccTweaked.peripherals.wrappedPeripheral
 ---| ccTweaked.peripherals.Command
@@ -30,6 +31,7 @@
 ---|ccTweaked.peripherals.Printer
 ---|ccTweaked.peripherals.Speaker
 ---|ccTweaked.peripherals.WiredModem
+---|ccTweaked.peripherals.Basin
 
 ---@alias ccTweaked.peripherals.modem.channel integer A channel to be used with a modem (0 - 65535)
 
